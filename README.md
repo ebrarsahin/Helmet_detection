@@ -24,6 +24,7 @@ Put your **protoc exe** on models-master\research.<br/>
 Run these codes in order `protoc object_detection/protos/*.proto --python_out=.` , `python setup.py build` , `python setup.py install` on (helmet_detection) C:\User\Desktop\models-master\research.
 
 Create new folders on models-master\research\object_detecion path with names as *data* , *training* , *images*.
+Create two sub folder as "test" and "train" in the *images* folder. Put test and train data with xml files.
 Put your config file on training folder and put your model on models-master\research\object_detecion.
 
 Move the files in legacy and deployment & nets folder to the object_detection folder.
