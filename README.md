@@ -93,4 +93,4 @@ Install OpenCV. <br/>
 Put the tflite model in the folder. <br/>
 Run this command `python3 python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` <br/>
 ![test](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry_test.png) <br/>
-Also you can run on the cam with TFLite_detection_webcam.py. (Make sure camera enable is enabled on raspi )
+Also you can run on the cam with TFLite_detection_webcam.py. (Make sure camera is enabled on raspi )
