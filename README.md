@@ -18,5 +18,5 @@
 
 Download [model-master](https://github.com/tensorflow/models) folder on your desktop.  <br/>
 
-Raspberry pi works with quantized model thats why selected  **ssd_mobilenet_v2_quantized_coco**.  [Download Model](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md)
+Raspberry pi works with quantized model thats why selected  [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Download model and config file as [ssd_mobilenet_v2_quantized_300x300_coco.config](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs).
 
