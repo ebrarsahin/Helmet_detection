@@ -24,3 +24,19 @@ Put your **protoc exe** on models-master\research.<br/>
 Run these codes in order `protoc object_detection/protos/*.proto --python_out=.` , `python setup.py build` , `python setup.py install` on (helmet_detection) C:\User\Desktop\models-master\research.
 
 Create new folders on models-master\research\object_detecion path with names as *data* , *training* , *images*.
+Put your config file on training folder and put your model on models-master\research\object_detecion.
+
+Move the files in legacy and deployment & nets folder to the object_detection folder.
+
+Go to config file , set num_classes : 1 & batch_size : 1 (recomended). 
+Change the paths : <br/>
+*fine_tune_checkpoint: "ssd_mobilenet_v2_quantized_300x300_coco_2019_01_03/model.ckpt"* <br/>
+*label_map_path: "data/helmet.pbtxt"*
+*train_input_reader: {
+  tf_record_input_reader {
+    input_path: "data/train.record"
+  }* <br/>
+ *eval_input_reader: {
+  tf_record_input_reader {
+    input_path: "data/test.record"
+  }* <br/>
