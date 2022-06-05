@@ -16,6 +16,8 @@
 `conda create -n helmetdetection python=3.7` <br/>
 `pip install TensorFlow==1.15 lxml pillow matplotlib jupyter contextlib2 cython tf_slim`
 
+**Customize the model!** <br/>
+
 Download [model-master](https://github.com/tensorflow/models) folder on your desktop.  <br/>
 
 Raspberry pi works with quantized model thats why selected  [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Download model and config file as [ssd_mobilenet_v2_quantized_300x300_coco.config](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs).
@@ -41,3 +43,15 @@ Change the paths : <br/>
   tf_record_input_reader {
     input_path: "data/test.record"
   }* <br/>
+
+**Training!** <br/>
+
+Add these codes to train.py file
+`from tensorflow.compat.v1 import ConfigProto` <br/>
+`from tensorflow.compat.v1 import InteractiveSession` <br/>
+`import keras  // conda install keras` <br/>
+`config = ConfigProto()` <br/>
+`config.gpu_options.per_process_gpu_memory_fraction = 0.6 # or 0.9`  <br/>
+`keras.backend.tensorflow_backend.set_session(tf.Session(config=config))` <br/>
+
+`python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path.
