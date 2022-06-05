@@ -63,3 +63,10 @@ You can continue the training as long as you want. (min 30k recomended) <br/>
 
 Run this command `python export_tflite_ssd_graph.py --pipeline_config_path=training/ssd_mobilenet_v2_quantized_
 300x300_coco.config --trained_checkpoint_prefix=training/model.ckpt-0 --output_directory=tflite_model` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path in order to generate tflite_graph.pb file. <br/>
+
+However you cant use tflite_graph.pb directly. You have to convert this file. You can check this [link](https://www.tensorflow.org/lite/models/convert#python_api). <br/>
+Put helmet.pbtxt file in tflite_model folder. <br/>
+Run this command `python pb_to_tfliteconvert.py` at the same path. <br/>
+You should see the new file with the tflite extension. <br/>
+
+Run `python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` this command and see the performance your custom model !
