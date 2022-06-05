@@ -7,6 +7,9 @@
 
 *This project was prototyped with raspberry Pi 4.*
 
-**Environment Prepration** <br/>
+**Create the environment !** <br/>
 `conda create -n helmetdetection python=3.7` <br/>
 `pip install TensorFlow==1.15 lxml pillow matplotlib jupyter contextlib2 cython tf_slim`
+
+Raspberry pi works with quantized model thats why selected  **ssd_mobilenet_v2_quantized_coco**. <br/>.
+[Download Model](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md)
