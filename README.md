@@ -8,7 +8,7 @@
 **Requirements** <br/>
 - Raspberry Pi 4 <br/>
 
-*This project was prototyped with raspberry Pi 4.*
+*This project was prototyped with Raspberry Pi 4.*
 ![raspberry](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry.jpg)
 
 **Create the environment on Anaconda !** <br/>
@@ -71,3 +71,17 @@ Run this command `python pb_to_tfliteconvert.py` at the same path. <br/>
 You should see the new file with the tflite extension. <br/>
 
 Run `python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` this command and see the performance your custom model !
+
+**Run your custom tflite model on Raspberry Pi!** <br/>
+Run the following codes at terminal in order. <br/>
+`Sudo apt-get update`, `Sudo apt-get dist-upgrade`. <br/>
+Create folder as object_detection on desktop <br/>
+Create virtual env with python on object_detection path and run these commands `sudo pip3 install virtualenv` , `python3 -m venv tflite-env` <br/>
+Activate the env `source tflite1-env/bin/activate`. <br/>
+
+Install tensorflow interpreter. `python3 -m pip install tflite-runtime`. You can check this [link](https://www.tensorflow.org/lite/guide/python) <br/>
+Install OpenCV. <br/>
+
+Put the tflite model in the folder. <br/>
+Run this command `python3 python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` <br/>
+
