@@ -54,4 +54,7 @@ Add these codes to *train.py* file <br/>
 `config.gpu_options.per_process_gpu_memory_fraction = 0.6 # or 0.9`  <br/>
 `keras.backend.tensorflow_backend.set_session(tf.Session(config=config))` <br/>
 
-`python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path.
+`python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path. <br/>
+
+You check to training on Tensorboard. Run this code `tensorboard --logdir=training` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path and go to localhost:6006/ on your browser. <br/>
+
