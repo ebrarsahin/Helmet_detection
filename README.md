@@ -20,3 +20,6 @@ Download [model-master](https://github.com/tensorflow/models) folder on your des
 
 Raspberry pi works with quantized model thats why selected  [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Download model and config file as [ssd_mobilenet_v2_quantized_300x300_coco.config](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs).
 
+Put your **protoc exe** on models-master\research.<br/>
+Run this code `protoc object_detection/protos/*.proto --python_out=.` on (helmet_detection) C:\User\Desktop\models-master\research.
+
