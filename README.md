@@ -57,4 +57,4 @@ Add these codes to *train.py* file <br/>
 `python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path. <br/>
 
 You check to training on Tensorboard. Run this code `tensorboard --logdir=training` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path and go to localhost:6006/ on your browser. <br/>
-
+![tensorboard](https://github.com/ebrarsahin/helmet_detection/blob/main/results/tensorboard.png)
