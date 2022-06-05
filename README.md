@@ -46,7 +46,7 @@ Change the paths : <br/>
 
 **Training!** <br/>
 
-Add these codes to train.py file
+Add these codes to *train.py* file <br/>
 `from tensorflow.compat.v1 import ConfigProto` <br/>
 `from tensorflow.compat.v1 import InteractiveSession` <br/>
 `import keras  // conda install keras` <br/>
