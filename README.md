@@ -18,7 +18,7 @@
 
 **Customize the model!** <br/>
 
-Download [model-master](https://github.com/tensorflow/models) folder on your desktop.  <br/>
+Download [models-master](https://github.com/tensorflow/models) folder on your desktop.  <br/>
 
 Raspberry pi works with quantized model thats why selected  [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Download model and config file as [ssd_mobilenet_v2_quantized_300x300_coco.config](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs).
 
@@ -57,4 +57,9 @@ Add these codes to *train.py* file <br/>
 `python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path. <br/>
 
 You check to training on Tensorboard. Run this code `tensorboard --logdir=training` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path and go to localhost:6006/ on your browser. <br/>
-![tensorboard](https://github.com/ebrarsahin/helmet_detection/blob/main/results/tensorboard.png)
+![tensorboard](https://github.com/ebrarsahin/helmet_detection/blob/main/results/tensorboard.png) <br/>
+
+You can continue the training as long as you want. (min 30k recomended) <br/>
+
+Run this command `python export_tflite_ssd_graph.py --pipeline_config_path=training/ssd_mobilenet_v2_quantized_
+300x300_coco.config --trained_checkpoint_prefix=training/model.ckpt-0 --output_directory=tflite_model` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path in order to generate tflite_graph.pb file. <br/>
