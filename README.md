@@ -10,7 +10,7 @@
 *This project was prototyped with raspberry Pi 4.*
 ![raspberry](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry.jpg)
 
-**Create the environment !** <br/>
+**Create the environment on Anaconda !** <br/>
 `conda create -n helmetdetection python=3.7` <br/>
 `pip install TensorFlow==1.15 lxml pillow matplotlib jupyter contextlib2 cython tf_slim`
 
