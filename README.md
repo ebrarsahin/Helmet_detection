@@ -8,6 +8,7 @@
 - Raspberry Pi 4 <br/>
 
 *This project was prototyped with raspberry Pi 4.*
+![raspberry](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry.jpg)
 
 **Create the environment !** <br/>
 `conda create -n helmetdetection python=3.7` <br/>
