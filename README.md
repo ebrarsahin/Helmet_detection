@@ -72,6 +72,12 @@ You should see the new file with the tflite extension. <br/>
 
 Run `python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` this command and see the performance your custom model !
 
+**Raspberry Pi Configuration :** <br/>
+You can connect the Raspberry Pi with Putty. <br/>
+![putty](https://github.com/ebrarsahin/helmet_detection/blob/main/results/putty.png) <br/>
+Set the configuration like below in order to enable VNC. <br/>
+![vnc](https://github.com/ebrarsahin/helmet_detection/blob/main/results/vnc_config.png) <br/>
+
 **Run your custom tflite model on Raspberry Pi!** <br/>
 Run the following codes at terminal in order. <br/>
 `Sudo apt-get update`, `Sudo apt-get dist-upgrade`. <br/>
@@ -84,4 +90,5 @@ Install OpenCV. <br/>
 
 Put the tflite model in the folder. <br/>
 Run this command `python3 python TFLite_detection_image.py --modeldir=tfitemodel --image=testimage.jpg` <br/>
-![test](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry_test.png)
+![test](https://github.com/ebrarsahin/helmet_detection/blob/main/results/raspberry_test.png) <br/>
+Also you can run on the cam with TFLite_detection_webcam.py. (Make sure camera enable is enabled on raspi )
