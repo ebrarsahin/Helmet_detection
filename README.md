@@ -23,7 +23,7 @@ Download [models-master](https://github.com/tensorflow/models) folder on your de
 Raspberry pi works with quantized model thats why selected  [ssd_mobilenet_v2_quantized_coco](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md). Download model and config file as [ssd_mobilenet_v2_quantized_300x300_coco.config](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs).
 
 Put your **protoc exe** on models-master\research.<br/>
-Run these codes in order `protoc object_detection/protos/*.proto --python_out=.` , `python setup.py build` , `python setup.py install` on (helmet_detection) C:\User\Desktop\models-master\research.
+Run these commands in order `protoc object_detection/protos/*.proto --python_out=.` , `python setup.py build` , `python setup.py install` on (helmet_detection) C:\User\Desktop\models-master\research.
 
 Create new folders on models-master\research\object_detecion path with names as *data* , *training* , *images*.
 Create two sub folder as "test" and "train" in the *images* folder. Put test and train data with xml files.
@@ -54,7 +54,7 @@ Add these codes to *train.py* file <br/>
 `config.gpu_options.per_process_gpu_memory_fraction = 0.6 # or 0.9`  <br/>
 `keras.backend.tensorflow_backend.set_session(tf.Session(config=config))` <br/>
 
-`python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this code on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path. <br/>
+`python train.py --logtostderr –train_dir=training/ --pipeline_config_path=training/ssd_mobilenet_v2_quantized_300x300_coco.config` run this command on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path. <br/>
 
 You check to training on Tensorboard. Run this code `tensorboard --logdir=training` on (helmet_detection) C:\User\Desktop\models-master\research\object_detection path and go to localhost:6006/ on your browser. <br/>
 ![tensorboard](https://github.com/ebrarsahin/helmet_detection/blob/main/results/tensorboard.png) <br/>
